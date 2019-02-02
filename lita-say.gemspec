@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-handler-say"
-  spec.version       = "0.3.0"
+  spec.version       = "0.4.0"
   spec.authors       = ["Anchieta Júnior"]
   spec.email         = ["santosjr87@gmail.com"]
   spec.description   = "Just a simple handler"
