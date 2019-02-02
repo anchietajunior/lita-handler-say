@@ -1,10 +1,11 @@
 module Lita
   module Handlers
     class Say < Handler
-      route(/ˆsay\s+(\d+)$/i,
+      route(
+        /ˆsay\s+(\d+)$/i,
         :just_say,
         command: true,
-        help: { 'say' => 'just say Hi!' }
+        help: { 'say' => 'just say Hi! = #{doube(n)}' }
       )
 
       def just_say(response)
