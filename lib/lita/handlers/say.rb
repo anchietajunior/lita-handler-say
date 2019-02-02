@@ -1,14 +1,21 @@
 module Lita
   module Handlers
     class Say < Handler
-      route(/say/,
+      route(/ˆsay\s+(\d+)$/i,
         :just_say,
         command: true,
         help: { 'say' => 'just say Hi!' }
       )
 
       def just_say(response)
-        response.reply "Hi!"
+        n = response.match_data.captures.first
+        n = Integer(n)
+
+        response.reply "Hi! #{double(n)}"
+      end
+
+      def double(n)
+        n + n
       end
 
       Lita.register_handler(self)
